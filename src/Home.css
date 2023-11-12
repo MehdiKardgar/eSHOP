@@ -1,22 +1,36 @@
+/* Overall styling for the Home component */
 .home {
   display: flex;
   justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
   max-width: 1500px;
 }
 
+/* Styling for the main image at the top */
 .home__image {
   width: 100%;
   height: 400px;
-  z-index: -1;
   margin-bottom: -50px;
+  /* Creating an overlap effect */
   mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  /* Gradient mask for a fade-out effect */
 }
 
+/* Styling for each row of products */
 .home__row {
   display: flex;
-  z-index: 1;
-  margin-left: 5px;
-  margin-right: 5px;
+  margin: 0 -5px;
+  /* Add negative margin to counteract margin on individual products */
+}
+
+/* Styling for individual product containers */
+.product {
+  flex: 1;
+  margin: 0 5px;
+  /* Add spacing between products */
+}
+
+/* Optional: Add a subtle box shadow to the product containers */
+.product:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
