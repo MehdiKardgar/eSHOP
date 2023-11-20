@@ -4,10 +4,16 @@
   display: flex;
   margin-top: 20px;
   margin-bottom: 20px;
+  border-bottom: 1px solid lightgray;
+  /* Add a border for better separation */
+  padding-bottom: 20px;
+  /* Add some padding at the bottom */
 }
 
 .checkoutProduct__info {
-  padding-left: 20px
+  /* padding-left: 20px */
+  flex: 1;
+  /* Allow the content to expand and take remaining space */
 }
 
 .checkoutProduct__info>button {
@@ -16,19 +22,38 @@
   margin-top: 10px;
   border-color: #a88734 #9c7e31 #846a29;
   color: #111;
+  padding: 8px 16px;
+  /* Adjust padding for better button size */
+  font-size: 14px;
+  /* Make the font size consistent */
+  cursor: pointer;
+  border-radius: 4px;
+  /* Add slight border-radius */
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.checkoutProduct__info>button:hover {
+  background: #ffbf3e;
+  color: #000;
 }
 
 .checkoutProduct__image {
   object-fit: contain;
   width: 180px;
   height: 180px;
+  margin-right: 20px;
+  /* Add some space to the right of the image */
 }
 
 .checkoutProduct__rating {
   display: flex;
+  margin-bottom: 8px;
+  /* Add some space at the bottom of the rating */
 }
 
 .checkoutProduct__title {
-  font-size: 17px;
-  font-weight: 800;
+  font-size: 18px;
+  /* Slightly increase font size for title */
+  font-weight: bold;
+  /* Use 'bold' instead of '800' for clarity */
 }

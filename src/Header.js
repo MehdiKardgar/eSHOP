@@ -11,7 +11,7 @@ import { useStateValue } from "./StateProvider";
 
 function Header() {
   // const [{ basket }, dispatch] = useStateValue;
-  const [{ basket }, dispatch] = useStateValue();
+  const [{ basket }, dispatch] = useStateValue(); // Invoke useStateValue as a function
 
   return (
     <div className="header">
