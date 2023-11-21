@@ -16,8 +16,9 @@ function Checkout() {
         <div>
           <h2 className="checkout__title">Your Shoping Basket</h2>
 
-          {basket.map((item) => (
+          {basket.map((item, index) => (
             <CheckoutProduct
+              key={`${item.id}-${index}`} // Using item.id and index for a unique key
               id={item.id}
               title={item.title}
               image={item.image}
