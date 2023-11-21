@@ -29,7 +29,7 @@ function Product({ id, title, image, price, rating }) {
           {Array(rating)
             .fill()
             .map((_, i) => (
-              <p key={i}>&#11088;</p>
+              <p key={`${id}-star-${i}`}>&#11088;</p>
             ))}
         </div>
         <p className="product__price">
