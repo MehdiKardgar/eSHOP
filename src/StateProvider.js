@@ -1,18 +1,19 @@
-// custom hook
+// Custom hook for managing global state
 
 import React, { createContext, useContext, useReducer } from "react";
 
-// prepares the data layer
+// Creates a context for the state management
 export const StateContext = createContext();
 
-// wrap our app and provide the data layer
+// Component that provides the state to the app and wraps the app with the data layer
 export const StateProvider = ({ reducer, initialState, children }) => {
   return (
+    // Provides the state and the dispatch function to the app via context
     <StateContext.Provider value={useReducer(reducer, initialState)}>
-      {children}
+      {children} {/* Renders the app components wrapped inside StateProvider */}
     </StateContext.Provider>
   );
 };
 
-// Pull information from the data layer
+// Custom hook to access the state and dispatch function from the data layer
 export const useStateValue = () => useContext(StateContext);

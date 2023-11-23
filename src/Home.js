@@ -6,6 +6,8 @@ import Product from "./Product";
 function Home() {
   return (
     <div className="home">
+      {" "}
+      {/* Home section */}
       <div className="home__container">
         <img src="/ecommerce.jpg" alt="" className="home__image" />
 
